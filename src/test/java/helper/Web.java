@@ -9,6 +9,7 @@ public class Web {
         WebDriverManager.chromedriver().setup();
         WebDriver browser = new ChromeDriver();
 
+        browser.manage().window().maximize();
         browser.get(url);
 
         return browser;

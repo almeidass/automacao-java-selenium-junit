@@ -1,6 +1,7 @@
 package tests;
 
 import helper.Web;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -20,5 +21,10 @@ public class GoogleTest {
         new GooglePageObjectsTest(browser)
                 .pesquisarPorDiretorETituloFilme("Joe Russo", "Vingadores: Ultimato")
                 .imprimirQuantidadeAproximadaDeResultados();
+    }
+
+    @After
+    public void  tearDown(){
+        browser.quit();
     }
 }
